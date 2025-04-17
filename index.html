@@ -3,27 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>El Tiempo Es Ahora</title>
+  <title> EL TIEMPO ES AHORA </title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* Paleta de colores */
     :root {
-      --celeste: #00bfff;
+      --azul-profundo: #002f6c;
+      --azul-celeste: #0096ff;
+      --azul-suave: #e6f2ff;
       --aguamarina: #7fffd4;
-      --azul-oscuro: #003f5c;
       --blanco: #ffffff;
-      --gris-claro: #f5f5f5;
+      --fondo-oscuro: #001f3f;
     }
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: var(--blanco);
-      color: var(--azul-oscuro);
+      font-family: 'Quicksand', sans-serif;
+      font-size: 18px;
+      background-color: var(--fondo-oscuro);
+      color: var(--azul-suave);
     }
 
-    /* Barra de navegación */
     nav {
-      background-color: var(--azul-oscuro);
+      background-color: var(--azul-profundo);
       color: var(--blanco);
       display: flex;
       justify-content: space-between;
@@ -33,13 +34,13 @@
 
     nav h1 {
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 1rem;
+      gap: 1.2rem;
       margin: 0;
       padding: 0;
     }
@@ -51,36 +52,88 @@
     }
 
     nav ul li a:hover {
+      color: var(--azul-profundo);
+      background-color: var(--aguamarina);
+      padding: 0.3rem 0.5rem;
+      border-radius: 5px;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
       color: var(--aguamarina);
     }
 
-    /* Encabezado */
-    header {
-      background-color: var(--celeste);
-      color: var(--azul-oscuro);
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-
-    /* Imagen destacada */
     .imagen-fondo {
+      position: relative;
       background-image: url('imagen.jpg');
       background-size: cover;
       background-position: center;
-      height: 300px;
+      height: auto;
+      padding: 4rem 2rem;
       border-radius: 10px;
       margin: 2rem auto;
       max-width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--blanco);
+      flex-direction: column;
     }
 
-    /* Contenido principal */
+    .imagen-fondo .texto-sobre-imagen {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 10px;
+      font-size: 1.3rem;
+      max-width: 800px;
+    }
+
+    .seccion-reflexion {
+      max-width: 90%;
+      margin: 2rem auto;
+      text-align: center;
+      color: var(--azul-suave);
+      font-size: 1.2rem;
+    }
+
     main {
       padding: 2rem;
-      background-color: var(--gris-claro);
+      background-color: var(--azul-profundo);
+      color: var(--blanco);
       text-align: center;
+      border-radius: 8px;
+      max-width: 90%;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    /* Responsivo */
+    .botones {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .boton-personalizado {
+      background-color: var(--aguamarina);
+      color: var(--azul-profundo);
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .boton-personalizado:hover {
+      background-color: var(--azul-celeste);
+      transform: scale(1.05);
+    }
+
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
@@ -94,7 +147,11 @@
       }
 
       .imagen-fondo {
-        height: 200px;
+        padding: 2rem 1rem;
+      }
+
+      .imagen-fondo .texto-sobre-imagen {
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -102,25 +159,81 @@
 <body>
 
   <nav>
-    <h1>eltiempoesahora</h1>
+    <h1>EL TIEMPO ES AHORA</h1>
     <ul>
       <li><a href="#">Inicio</a></li>
       <li><a href="#sobre">Sobre mí</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#QUIERO EMPEZAR">QUIERO EMPEZAR</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
 
   <header>
     <h2>PROPÓSITO DE VIDA</h2>
-    <p>Tu propósito te está esperando. ¡Es ahora!</p>
+    <p>Tu propósito te está esperando</p>
+    <p>¿TE GUSTARÍA SER PARTE DE LA SOLUCIÓN?</p>
   </header>
 
-  <div class="imagen-fondo"></div>
+  <div class="imagen-fondo">
+    <div class="texto-sobre-imagen">
+      <h2>El Tiempo Es Ahora</h2>
+      <p>No esperes más señales.<br>
+      No postergues más tu poder.<br>
+      El tiempo es ahora.</p>
+      <p>
+        Cada minuto que dudás de vos, el mundo pierde una parte de su luz.<br>
+        Cada vez que elegís adaptarte al miedo, una posibilidad de transformación se desvanece.<br>
+        Pero cada vez que confiás en tu intuición, cada vez que elegís actuar desde el amor, desde la conciencia, algo cambia —no solo en vos, sino en todos.
+      </p>
+      <p>
+        Este es un llamado urgente.<br>
+        A despertar.<br>
+        A reconocerte.<br>
+        A recordar para qué viniste.
+      </p>
+      <p>
+        Ya no estamos en tiempos de preparación. Estamos en tiempos de acción alineada.<br>
+        No necesitás tener todo resuelto. Solo necesitás dar el paso. El siguiente. El que ahora mismo tu corazón ya sabe cuál es.
+      </p>
+      <p>
+        El mundo necesita que estés presente.<br>
+        Tu alma te está pidiendo compromiso.<br>
+        Y la vida te está ofreciendo su respaldo.
+      </p>
+      <p><strong>El poder está dentro tuyo, es AHORA.</strong></p>
+    </div>
+  </div>
+
+  <section class="seccion-reflexion">
+    <h3>El Poder Está en Vos<br><small>por Nicolás Gadea</small></h3>
+    <p>
+      Vivimos tiempos de transformación. Muchos sentimos que algo cambia dentro y fuera nuestro. A veces es confusión, otras veces es ansiedad o una necesidad urgente de sentido. Y es normal. No estás solo. No sos la única persona en este estado.
+    </p>
+    <p>
+      Estoy acá para acompañarte a reconocer el poder que está dentro tuyo. Para decirte que no estás perdido, que no estás rota, que todo lo que necesitás ya vive en vos. Solo necesita ser despertado.
+    </p>
+    <p>
+      A lo largo de mi camino, fui elaborando un pensamiento que me ayudó a comprender fenómenos globales —cómo nos afectan los movimientos colectivos, los cambios sistémicos, las energías que atraviesan a todos—. Y descubrí que, desde la comprensión profunda, llega la calma. Y desde esa calma, se hace visible tu propósito.
+    </p>
+    <p>
+      Tu propósito no es una meta lejana ni algo fijo: es una expresión viva, que cambia con vos, momento a momento.<br>
+      Y en cada momento, tenés disponibles habilidades distintas, actualizadas, alineadas con lo que el presente te pide.<br>
+      La clave es poder reconocerlas, confiar en ellas y usarlas con conciencia.
+    </p>
+    <p>
+      Cuando aprendés a leer lo que sucede dentro tuyo, también podés comprender lo que sucede en el mundo.<br>
+      Y cuando comprendés lo que sucede en el mundo, podés volver a tu centro con más fuerza, con más certeza, con más entrega.
+    </p>
+  </section>
 
   <main>
-    <p>Este es un espacio creado para conectar con lo que realmente importa. Descubrí quién sos, qué te inspira y cómo podés transformar tu vida.</p>
+    <div class="botones">
+      <button class="boton-personalizado">Descubrir más</button>
+      <button class="boton-personalizado">Quiero comenzar</button>
+      <button class="boton-personalizado">Contáctame</button>
+    </div>
   </main>
 
 </body>
 </html>
+
