@@ -5,14 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>El Tiempo Es Ahora</title>
   <style>
+    /* Paleta de colores */
+    :root {
+      --celeste: #00bfff;
+      --aguamarina: #7fffd4;
+      --azul-oscuro: #003f5c;
+      --blanco: #ffffff;
+      --gris-claro: #f5f5f5;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: var(--blanco);
+      color: var(--azul-oscuro);
     }
 
+    /* Barra de navegación */
     nav {
-      background-color: #1a1a1a;
-      color: white;
+      background-color: var(--azul-oscuro);
+      color: var(--blanco);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -33,13 +45,39 @@
     }
 
     nav ul li a {
-      color: white;
+      color: var(--blanco);
       text-decoration: none;
       font-weight: bold;
     }
 
     nav ul li a:hover {
-      text-decoration: underline;
+      color: var(--aguamarina);
+    }
+
+    /* Encabezado */
+    header {
+      background-color: var(--celeste);
+      color: var(--azul-oscuro);
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    /* Imagen destacada */
+    .imagen-fondo {
+      background-image: url('imagen.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      border-radius: 10px;
+      margin: 2rem auto;
+      max-width: 90%;
+    }
+
+    /* Contenido principal */
+    main {
+      padding: 2rem;
+      background-color: var(--gris-claro);
+      text-align: center;
     }
 
     /* Responsivo */
@@ -53,6 +91,10 @@
         flex-direction: column;
         width: 100%;
         margin-top: 1rem;
+      }
+
+      .imagen-fondo {
+        height: 200px;
       }
     }
   </style>
@@ -69,61 +111,16 @@
     </ul>
   </nav>
 
-  <!-- Acá va tu contenido -->
-  <div style="padding: 2rem;">
-    <h2>¡Bienvenido a mi página!</h2>
-    <p>Contenido principal acá</p>
-  </div>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>El Tiempo Es Ahora</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      text-align: center;
-      background-color: #f5f5f5;
-    }
-
-    header {
-      padding: 2rem;
-      background-color: #222;
-      color: blue;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    main {
-      padding: 1rem;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        font-size: 1.2rem;
-      }
-    }
-  </style>
-</head>
-<body>
   <header>
-    <h1>El Tiempo Es Ahora</h1>
-    <p> </p>
+    <h2>PROPÓSITO DE VIDA</h2>
+    <p>Tu propósito te está esperando. ¡Es ahora!</p>
   </header>
 
+  <div class="imagen-fondo"></div>
+
   <main>
-    <img src="imagen.jpg" alt="Imagen del sitio" />
-    <p>Tu propósito de Vida te está esperando </p>
+    <p>Este es un espacio creado para conectar con lo que realmente importa. Descubrí quién sos, qué te inspira y cómo podés transformar tu vida.</p>
   </main>
+
 </body>
 </html>
