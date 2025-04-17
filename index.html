@@ -1,13 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Sitio Web</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Tiempo Es Ahora</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      padding: 2rem;
+      background-color: #222;
+      color: white;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    main {
+      padding: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>¡El tiempo es ahora!</h1>
-  <p>Bienvenid@ a mi primera página web ✨</p>
-  <script src="script.js"></script>
+  <header>
+    <h1>El Tiempo Es Ahora</h1>
+    <p>Bienvenido a mi sitio web ✨</p>
+  </header>
+
+  <main>
+    <img src="imagen.jpg" alt="Descripción de la imagen" />
+    <p>Este es un proyecto personal sobre vivir el presente.</p>
+  </main>
 </body>
 </html>
