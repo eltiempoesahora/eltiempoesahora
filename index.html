@@ -7,12 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --azul-profundo: #002f6c;
-      --azul-celeste: #0096ff;
-      --azul-suave: #e6f2ff;
+      --azul-empresarial: #003366;
+      --azul-acento: #007acc;
+      --azul-claro: #e0f0ff;
       --aguamarina: #7fffd4;
       --blanco: #ffffff;
-      --fondo-oscuro: #001f3f;
+      --fondo-oscuro: #001a33;
+      --crema: #f5f0e1;
     }
 
     body {
@@ -20,21 +21,26 @@
       font-family: 'Quicksand', sans-serif;
       font-size: 18px;
       background-color: var(--fondo-oscuro);
-      color: var(--azul-suave);
+      color: var(--azul-claro);
     }
 
     nav {
-      background-color: var(--azul-profundo);
+      background-color: var(--azul-empresarial);
       color: var(--blanco);
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 2;
     }
 
     nav h1 {
       margin: 0;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
+      color: var(--crema);
+      font-weight: 600;
     }
 
     nav ul {
@@ -52,7 +58,7 @@
     }
 
     nav ul li a:hover {
-      color: var(--azul-profundo);
+      color: var(--azul-empresarial);
       background-color: var(--aguamarina);
       padding: 0.3rem 0.5rem;
       border-radius: 5px;
@@ -60,8 +66,24 @@
 
     header {
       text-align: center;
-      padding: 2rem;
+      padding: 4rem 2rem 2rem;
       color: var(--aguamarina);
+      position: relative;
+      z-index: 2;
+    }
+
+    .ventana {
+      background-color: var(--azul-empresarial);
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 90%;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .ventana h2, .ventana h3 {
+      color: var(--aguamarina);
+      margin-top: 0;
     }
 
     .imagen-fondo {
@@ -70,10 +92,9 @@
       background-size: cover;
       background-position: center;
       height: auto;
-      padding: 4rem 2rem;
+      padding: 8rem 2rem 2rem;
       border-radius: 10px;
-      margin: 2rem auto;
-      max-width: 90%;
+      margin: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -83,30 +104,20 @@
     }
 
     .imagen-fondo .texto-sobre-imagen {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 2rem;
       border-radius: 10px;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       max-width: 800px;
     }
 
-    .seccion-reflexion {
-      max-width: 90%;
-      margin: 2rem auto;
-      text-align: center;
-      color: var(--azul-suave);
-      font-size: 1.2rem;
-    }
-
-    main {
-      padding: 2rem;
-      background-color: var(--azul-profundo);
-      color: var(--blanco);
-      text-align: center;
-      border-radius: 8px;
-      max-width: 90%;
-      margin: auto;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    .imagen-hero-adicional {
+      width: 100%;
+      height: 400px;
+      background-image: url('nueva-imagen.jpg');
+      background-size: cover;
+      background-position: center;
+      margin: 0;
     }
 
     .botones {
@@ -119,10 +130,10 @@
 
     .boton-personalizado {
       background-color: var(--aguamarina);
-      color: var(--azul-profundo);
+      color: var(--azul-empresarial);
       border: none;
       padding: 1rem 2rem;
-      border-radius: 30px;
+      border-radius: 6px;
       font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
@@ -130,8 +141,9 @@
     }
 
     .boton-personalizado:hover {
-      background-color: var(--azul-celeste);
-      transform: scale(1.05);
+      background-color: var(--azul-acento);
+      color: var(--blanco);
+      transform: translateY(-2px);
     }
 
     @media (max-width: 600px) {
@@ -147,7 +159,7 @@
       }
 
       .imagen-fondo {
-        padding: 2rem 1rem;
+        padding: 6rem 1rem 2rem;
       }
 
       .imagen-fondo .texto-sobre-imagen {
@@ -158,23 +170,23 @@
 </head>
 <body>
 
-  <nav>
-    <h1>EL TIEMPO ES AHORA</h1>
-    <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#sobre">Sobre mí</a></li>
-      <li><a href="#QUIERO EMPEZAR">QUIERO EMPEZAR</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-
-  <header>
-    <h2>PROPÓSITO DE VIDA</h2>
-    <p>Tu propósito te está esperando</p>
-    <p>¿TE GUSTARÍA SER PARTE DE LA SOLUCIÓN?</p>
-  </header>
-
   <div class="imagen-fondo">
+    <nav>
+      <h1>EL TIEMPO ES AHORA</h1>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#sobre">Sobre mí</a></li>
+        <li><a href="#QUIERO EMPEZAR">QUIERO EMPEZAR</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h2>PROPÓSITO DE VIDA</h2>
+      <p>Tu propósito te está esperando</p>
+      <p>¿TE GUSTARÍA SER PARTE DE LA SOLUCIÓN?</p>
+    </header>
+
     <div class="texto-sobre-imagen">
       <h2>El Tiempo Es Ahora</h2>
       <p>No esperes más señales.<br>
@@ -200,11 +212,33 @@
         Tu alma te está pidiendo compromiso.<br>
         Y la vida te está ofreciendo su respaldo.
       </p>
-      <p><strong>El poder está dentro tuyo, es AHORA.</strong></p>
+      <p>
+        <em>
+        No venimos a encajar.<br>
+        Venimos a expandir.<br>
+        A iluminar con la forma única que el alma elige habitar.<br><br>
+
+        Si tu corazón late fuerte por algo, no lo ignores.<br>
+        Es tu señal.<br>
+        Tu mapa interno guiándote hacia el lugar que te necesita vivo.<br><br>
+
+        No más permiso para ser vos.<br>
+        No más esperar validación externa.<br>
+        Tu autenticidad es medicina.<br><br>
+
+        Este es tu momento.<br>
+        Este es el tiempo del coraje amoroso.<br>
+        Del sí interno que transforma todo.<br>
+        Del salto al vacío sostenido por tu verdad.
+        </em>
+      </p>
+      <p><strong>El poder está dentro tuyo.</strong></p>
     </div>
   </div>
 
-  <section class="seccion-reflexion">
+  <div class="imagen-hero-adicional"></div>
+
+  <section class="ventana" id="sobre">
     <h3>El Poder Está en Vos<br><small>por Nicolás Gadea</small></h3>
     <p>
       Vivimos tiempos de transformación. Muchos sentimos que algo cambia dentro y fuera nuestro. A veces es confusión, otras veces es ansiedad o una necesidad urgente de sentido. Y es normal. No estás solo. No sos la única persona en este estado.
@@ -226,14 +260,13 @@
     </p>
   </section>
 
-  <main>
+  <section class="ventana">
     <div class="botones">
       <button class="boton-personalizado">Descubrir más</button>
       <button class="boton-personalizado">Quiero comenzar</button>
       <button class="boton-personalizado">Contáctame</button>
     </div>
-  </main>
+  </section>
 
 </body>
 </html>
-
