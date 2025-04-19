@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> EL TIEMPO ES AHORA </title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <title>EL TIEMPO ES AHORA</title>
+  
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Satisfy&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --azul-empresarial: #003366;
@@ -15,6 +20,90 @@
       --fondo-oscuro: #001a33;
       --crema: #f5f0e1;
     }
+	.slider {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  display: none;
+  object-fit: cover;
+}
+
+.slider img.active {
+  display: block;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.slider-controls button {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.mensaje-hero {
+  margin-top: -2rem;
+  text-align: center;
+  color: var(--aguamarina);
+  font-family: 'Bungee Spice', cursive;
+  font-size: 2rem;
+  padding: 3rem 1rem 1rem;
+}
+
+.imagen-fondo {
+  position: relative;
+  background-image: url('imagen.jpg');
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  padding: 8rem 2rem 2rem;
+  border-radius: 10px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--blanco);
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Ajustá el 0.5 para más o menos oscuridad */
+  z-index: 1;
+}
+
+.imagen-fondo > * {
+  position: relative;
+  z-index: 2;
+}
+
+.titulo-derecha {
+  width: 100%;
+  text-align: right;
+  margin-right: 0; /* opcional */
+}
 
     body {
       margin: 0;
@@ -32,15 +121,17 @@
       align-items: center;
       padding: 1rem 2rem;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      position: relative;
-      z-index: 2;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
     }
 
     nav h1 {
       margin: 0;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       color: var(--crema);
-      font-weight: 600;
+      font-family: 'Satisfy', cursive;
     }
 
     nav ul {
@@ -64,10 +155,13 @@
       border-radius: 5px;
     }
 
-    header {
-      text-align: center;
+    header
+.mensaje-hero {
+  width: 100%;
+  text-align: right;
+}
       padding: 4rem 2rem 2rem;
-      color: var(--aguamarina);
+      color: var(--azul-claro);
       position: relative;
       z-index: 2;
     }
@@ -82,13 +176,13 @@
     }
 
     .ventana h2, .ventana h3 {
-      color: var(--aguamarina);
+      color: var(--azul-claro);
       margin-top: 0;
     }
 
     .imagen-fondo {
       position: relative;
-      background-image: url('imagen.jpg');
+      background-image: url('nueva-imagen.jpg imagen.jpg');
       background-size: cover;
       background-position: center;
       height: auto;
@@ -113,11 +207,19 @@
 
     .imagen-hero-adicional {
       width: 100%;
-      height: 400px;
-      background-image: url('nueva-imagen.jpg');
+      height: 500px;
+      background-image: url(' imagen.jpg ');
       background-size: cover;
       background-position: center;
       margin: 0;
+    }
+
+    .nueva-imagen.jpg {
+      width: 100%;
+      height: 400px;
+      background-image: url(' nueva-imagen.jpg ');
+      background-size: cover;
+      background-position: center;
     }
 
     .botones {
@@ -129,7 +231,7 @@
     }
 
     .boton-personalizado {
-      background-color: var(--aguamarina);
+      background-color: var(--azul-claro);
       color: var(--azul-empresarial);
       border: none;
       padding: 1rem 2rem;
@@ -168,22 +270,39 @@
     }
   </style>
 </head>
+
 <body>
 
-  <div class="imagen-fondo">
-    <nav>
-      <h1>EL TIEMPO ES AHORA</h1>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#sobre">Sobre mí</a></li>
-        <li><a href="#QUIERO EMPEZAR">QUIERO EMPEZAR</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+  <nav>
+    <h1>El tiempo es ahora</h1>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#sobre">Sobre mí</a></li>
+      <li><a href="#QUIERO EMPEZAR">QUIERO EMPEZAR</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
 
-    <header>
-      <h2>PROPÓSITO DE VIDA</h2>
-      <p>Tu propósito te está esperando</p>
+  <!-- Espacio debajo del nav fijo -->
+  <div style="height: 10px;"></div>
+<div class="slider">
+  <img src="imagen.jpg" class="active" alt="Imagen 1">
+  <img src="imagen-nueva.jpg" alt="Imagen 2">
+  <img src="nueva-imagen.jpg" alt="Imagen 3">
+
+  <div class="slider-controls">
+    <button onclick="prevSlide()">❮</button>
+    <button onclick="nextSlide()">❯</button>
+  </div>
+</div>
+  <div class="imagen-fondo">
+  <div class="overlay"></div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Satisfy&display=swap" rel="stylesheet">
+    <header class="mensaje-hero">
+      <h2>"Tu propósito te está esperando</h2>
+      <p></p>
       <p>¿TE GUSTARÍA SER PARTE DE LA SOLUCIÓN?</p>
     </header>
 
@@ -237,7 +356,7 @@
   </div>
 
   <div class="imagen-hero-adicional"></div>
-
+  
   <section class="ventana" id="sobre">
     <h3>El Poder Está en Vos<br><small>por Nicolás Gadea</small></h3>
     <p>
@@ -260,6 +379,9 @@
     </p>
   </section>
 
+<div class="nueva-imagen.jpg">
+</div>
+
   <section class="ventana">
     <div class="botones">
       <button class="boton-personalizado">Descubrir más</button>
@@ -267,6 +389,28 @@
       <button class="boton-personalizado">Contáctame</button>
     </div>
   </section>
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slider img');
 
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  function prevSlide() {
+    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  // Auto-slide (opcional)
+  setInterval(nextSlide, 5000); // Cambia de imagen cada 5 segundos
+</script>
 </body>
 </html>
